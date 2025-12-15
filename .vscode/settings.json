@@ -1,6 +1,8 @@
 {
-    "C_Cpp.errorSquiggles": "disabled",
+    "idf.portWin": "COM8",
     "files.associations": {
-        "cstdint": "cpp"
+        "sdkconfig.h": "c",
+        "gpio.h": "c",
+        "esp_log.h": "c"
     }
 }
