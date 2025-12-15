@@ -1,18 +1,20 @@
-#ifndef _INA232_HPP_
-#define _INA232_HPP_
+#ifndef _INA236_HPP_
+#define _INA236_HPP_
 
 #include <stdint.h>
 #include "driver/i2c_master.h"
 
-class INA232{
+class INA236{
     public:
-        explicit INA232(i2c_master_dev_handle_t handle) : dev_handle(handle) {}
+        explicit INA236
+    (i2c_master_dev_handle_t handle) : dev_handle(handle) {}
         i2c_master_dev_handle_t get_handle(){return dev_handle;}
-        //Set up the configuration register for the INA232
+        //Set up the configuration register for the INA236
+    
 
-        esp_err_t ina232_configure(uint16_t config_value){};
+        esp_err_t ina236_configure(uint16_t config_value){};
 
-        //REGISTERS - INA232 DATASHEET SECTION 7.6.1
+        //REGISTERS - INA236 DATASHEET SECTION 7.6.1
         static constexpr uint8_t CONFIG       = 0x0;
         static constexpr uint8_t SHUNT        = 0x1;
         static constexpr uint8_t BUS          = 0x2;
@@ -34,4 +36,4 @@ class INA232{
 };
 
 
-#endif // INA232_HPP
+#endif // ina236_HPP
